@@ -144,7 +144,7 @@ jobs:
     - name: 下载内核源码
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace
-        git clone ${{ env.KERNEL_SOURCE }} -b ${{ env.KERNEL_SOURCE_BRANCH }} android-kernel --depth=1
+        git clone https://github.com/projects-nexus/nexus_kernel_xiaomi_sm8250 -b stable android-kernel --depth=1
       
     - name: 开启KVM配置
       if: env.ENABLE_KVM == 'true'
